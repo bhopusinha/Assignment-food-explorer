@@ -74,7 +74,7 @@ const NodeGraph: React.FC = () => {
     []
   );
 
-  const onNodeClick = async (event: MouseEvent, node: Node) => {
+  const onNodeClick = async (_: MouseEvent, node: Node) => {
     if (node.data.label === 'Explore') {
       const categories = await getCategories();
       const categoryNodes = categories.slice(0, 5).map((category: Category, index: number) => ({

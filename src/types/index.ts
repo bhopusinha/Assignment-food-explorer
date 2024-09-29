@@ -22,5 +22,5 @@ export interface MealDetails {
   strTags: string[];
   strYoutube: string;
   strIngredients: string[];
-  [key: string]: any;
+  [key: string]:string | string[] | null;
 }

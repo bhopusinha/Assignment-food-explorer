@@ -7,6 +7,14 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ meal, onClose }) => {
+
+  const getHref = (url: string | string[] | null): string | undefined => {
+    if (typeof url === 'string') {
+      return url;
+    }
+    return undefined;
+  };
+
   return (
     <div className="fixed top-0 right-0 w-96 h-full bg-white shadow-lg overflow-y-auto">
       <div className="p-4">
@@ -17,13 +25,13 @@ const Sidebar: React.FC<SidebarProps> = ({ meal, onClose }) => {
           </button>
         </div>
         <img src={meal.strMealThumb} alt={meal.strMeal} className="w-full rounded-lg mb-4" />
-        <div className="mb-4">
+        {/* <div className="mb-4">
           {meal.strTags?.split(',').map((tag:number) => (
             <span key={tag} className="inline-block bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full mr-2 mb-2">
               {tag}
             </span>
           ))}
-        </div>
+        </div> */}
         <div className="mb-4">
           <strong>Category: </strong>{meal.strCategory}<br />
           <strong>Area: </strong>{meal.strArea}<br />
@@ -32,7 +40,7 @@ const Sidebar: React.FC<SidebarProps> = ({ meal, onClose }) => {
             {meal.strYoutube}
           </a><br />
           <strong>Recipe: </strong>
-          <a href={meal.strSource} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+          <a href={getHref(meal.strSource)} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
             {meal.strSource}
           </a>
         </div>
