@@ -35,7 +35,7 @@ Make sure you have the following installed on your machine:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/food-explorer.git
+   git clone https://github.com/bhopusinha/Assignment-food-explorer.git
    cd food-explorer  
 
 2. **Install dependencies:**
