@@ -50,7 +50,7 @@ Make sure you have the following installed on your machine:
  Open **http://localhost:5173** to view it in the browser.   
    
 
-    
+This `README.md` provides a clear and concise overview of your Food Explorer application, including its features, technologies used, and steps to get started with the project.
 
       
    
